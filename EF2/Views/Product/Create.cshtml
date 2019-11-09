@@ -1,0 +1,63 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section Styles
+    {
+    <style type="text/css">
+        body {
+            background: url(/images/CreateBG.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg-trans {
+            background-color: rgba(0, 0, 0, 0.719);
+            border-radius: 10px;
+        }
+
+
+    </style>
+}
+
+<h2 class="text-center mb-4 mt-5">Ürün Kaydetme Sayfası</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="row mt-5 ">
+
+
+
+        <div class="col-1 col-lg-4 col-md-3"></div>
+        <div class="col-10 col-lg-4 col-md-6 text-white bg-trans p-5">
+            <div>
+                <label> Kategori Adı </label>
+                <input class="form-control mb-3" asp-for="Category" />
+            </div>
+            <div>
+                <label> Ürün Adı </label>
+                <input class="form-control mb-3" asp-for="Name" />
+            </div>
+            <div>
+                <label> Ürün Açıklaması </label>
+                <input class="form-control mb-3" asp-for="Description" />
+            </div>
+            <div>
+                <label> Ürün Fiyatı </label>
+                <input class="form-control mb-3" asp-for="Price" />
+            </div>
+            <div class="text-right">
+                <input type="submit" class="btn btn-primary" value="Create" />
+            </div>
+
+
+        </div>
+        <div class="col-1 col-lg-4 col-md-3"></div>
+
+    </div>
+</form>
